@@ -52,7 +52,7 @@
         "@trezoa/codecs": "2.0.0"
     },
     "devDependencies": {
-        "@trezoa/prettier-config-trezoa": "0.0.5",
+        "@trezoa/prettier-config-trezoa": "0.0.6",
         "@trezoa/tpl-type-length-value": "0.2.0",
         "@trezoa/web3.js": "^1.95.5",
         "@types/chai": "^5.0.1",
