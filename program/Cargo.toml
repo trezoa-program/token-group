@@ -1,0 +1,35 @@
+[package]
+name = "tpl-token-group-example"
+version = "0.2.1"
+description = "Trezoa Program Library Token Group Example"
+documentation = "https://docs.rs/tpl-token-group-example"
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+trezoa-program-error = "3.0.0"
+trezoa-program = "3.0.0"
+trezoa-system-interface = "2"
+tpl-pod = "0.7.0"
+tpl-token-2022 = { version = "10.0.0", features = ["no-entrypoint"] }
+tpl-token-group-interface = { version = "0.7.0" }
+tpl-type-length-value = "0.9.0"
+
+[dev-dependencies]
+trezoa-program-test = { version = "3.1.8", features = ["trezoa-unstable-api"] }
+trezoa-sdk = "3.0.0"
+tpl-discriminator = "0.5.1"
+tpl-token-client = { version = "0.18.0", features = ["dev-context-only-utils"] }
+tpl-token-metadata-interface = "0.8.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]

@@ -1,0 +1,28 @@
+[workspace]
+resolver = "2"
+members = [
+  "interface",
+  "program",
+]
+
+[workspace.package]
+authors = ["Trezoa-team Maintainers <maintainers@trezoa.xyz>"]
+repository = "https://github.com/trezoa-program/token-group"
+homepage = "https://trezoa-program.com"
+license = "Apache-2.0"
+edition = "2021"
+
+[workspace.lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = [
+    'cfg(target_os, values("trezoa"))',
+    'cfg(feature, values("frozen-abi", "no-entrypoint", "custom-heap", "custom-panic"))',
+]
+
+[workspace.metadata.spellcheck]
+config = "scripts/spellcheck.toml"
+
+[workspace.metadata.release]
+pre-release-commit-message = "Publish {{crate_name}} v{{version}}"
+tag-message = "Publish {{crate_name}} v{{version}}"
+consolidate-commits = false
